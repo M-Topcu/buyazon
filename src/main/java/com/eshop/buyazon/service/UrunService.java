@@ -13,6 +13,7 @@ public class UrunService {
 
     private UrunRepository urunRepository;
 
+    /*
     public Urun urunKaydet(UrunKayitIstegi urunKayitIstegi){
 
         Urun urun=new Urun();
@@ -21,11 +22,13 @@ public class UrunService {
         urun.setFiyat(urunKayitIstegi.getFiyat());
         urun.setResimler(urunKayitIstegi.getResimler());
         urun.setStokAdedi(urunKayitIstegi.getStokAdedi());
-        urun.setSatici("Selami");
+
 
 
         return urunRepository.save(urun);
 
 
     }
+
+     */
 }

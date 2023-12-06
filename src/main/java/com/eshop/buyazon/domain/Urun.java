@@ -20,8 +20,9 @@ public class Urun {
     @Column(length=30,nullable = false)
     private String isim;
 
-    @Column(nullable = false)
-    private String satici;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="satici_id",nullable = false)
+    private Satici satici;
 
     @Column(nullable = false)
     private Double fiyat;

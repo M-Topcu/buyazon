@@ -21,6 +21,7 @@ public class Satici {
     @Column(nullable = false)
     private Long vergiNo;
 
-    private String urunListesi;
+    @OneToMany(mappedBy ="satici")
+    private List<Urun> urunListesi;
 
 }

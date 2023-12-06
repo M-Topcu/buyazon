@@ -1,8 +1,8 @@
 package com.eshop.buyazon.controller;
 
 import com.eshop.buyazon.dto.StatusResponse;
-import com.eshop.buyazon.dto.UrunKayitIstegi;
-import com.eshop.buyazon.service.UrunService;
+import com.eshop.buyazon.dto.UserKayitIstegi;
+import com.eshop.buyazon.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,28 +14,25 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/urun")
+@RequestMapping("/user")
 @AllArgsConstructor
-public class UrunController {
+public class UserController {
 
+    private UserService userService;
 
-    private UrunService urunService;
-
-    /*
     @PostMapping
     @RequestMapping("/kaydet")
-    public ResponseEntity<StatusResponse> urunKaydet(@Valid @RequestBody UrunKayitIstegi urunKayitIstegi) {
+    public ResponseEntity<StatusResponse> userKaydet(@Valid @RequestBody UserKayitIstegi userKayitIstegi) {
 
-        urunService.urunKaydet(urunKayitIstegi);
+        userService.userKaydet(userKayitIstegi);
 
         StatusResponse response=new StatusResponse();
-        response.setMesage("Urun Kaydedildi");
+        response.setMessage("Urun Kaydedildi");
         response.setSuccess(true);
 
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
-     */
+
+
+
 }
-
-
-
