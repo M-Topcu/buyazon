@@ -1,21 +1,20 @@
 package com.eshop.buyazon.domain;
 
-import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
 
-import java.util.Set;
+import javax.persistence.*;
 
 @Entity
 @Data
-@Builder(toBuilder = true)
+@AllArgsConstructor
+@NoArgsConstructor
 public class Urun {
 
     @Id()
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Setter(AccessLevel.NONE)
+    //@Setter(AccessLevel.NONE)
     private Long id;
 
     @Column(length=30,nullable = false)
@@ -27,7 +26,7 @@ public class Urun {
     @Column(nullable = false)
     private Double fiyat;
 
-    private Set<ResimDosyasi> resimler;
+    private String resimler;
 
     @Column(nullable = false)
     private Long stokAdedi;

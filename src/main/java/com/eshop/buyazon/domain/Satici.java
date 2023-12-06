@@ -1,9 +1,9 @@
 package com.eshop.buyazon.domain;
 
-import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Data;
 
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -21,6 +21,6 @@ public class Satici {
     @Column(nullable = false)
     private Long vergiNo;
 
-    private List<Urun> urunListesi;
+    private String urunListesi;
 
 }
