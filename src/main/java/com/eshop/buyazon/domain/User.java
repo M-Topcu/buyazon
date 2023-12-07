@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Set;
@@ -40,6 +41,11 @@ public class User {
     private LocalDateTime uyelikBaslangici;
 
     private Set<Rol> rol;
+
+    @PrePersist
+    public void prePersist(){
+        uyelikBaslangici= LocalDateTime.now();
+    }
 
 
 
