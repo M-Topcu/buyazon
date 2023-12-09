@@ -1,8 +1,6 @@
 package com.eshop.buyazon.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -14,7 +12,7 @@ public class Urun {
 
     @Id()
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //@Setter(AccessLevel.NONE)
+    @Setter(AccessLevel.NONE)
     private Long id;
 
     @Column(length=30,nullable = false)
